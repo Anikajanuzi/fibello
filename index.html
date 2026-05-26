@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fibello Sweets</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Fibello home">
+          <img src="assets/fibello-logo.png" alt="Fibello Sweets logo" />
+        </a>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a class="active" href="index.html">Home</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="locations.html">Locations</a>
+          <a href="custom-order.html">Custom Order</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="page active">
+        <div class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Fresh pastries, cakes, and sweet little luxuries</p>
+            <h1>Welcome to Fibello, your premium dessert boutique.</h1>
+            <p>
+              Discover soft cakes, handcrafted pastries, glossy chocolate bites, and custom desserts made for celebrations that deserve something beautiful.
+            </p>
+            <div class="hero-actions">
+              <a class="frost-btn primary" href="custom-order.html">Customize Cake</a>
+              <a class="frost-btn ghost" href="#desserts">Shop Desserts</a>
+            </div>
+          </div>
+          <div class="hero-dessert" aria-label="Featured dessert">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1050&q=80" alt="Layered chocolate dessert cake" />
+            <div class="floating-card">
+              <strong>Popular Today</strong>
+              <span>Strawberry cloud cake</span>
+            </div>
+          </div>
+        </div>
+
+        <section class="section strip">
+          <div>
+            <span class="mini-label">Made daily</span>
+            <strong>Premium ingredients</strong>
+          </div>
+          <div>
+            <span class="mini-label">Customizable</span>
+            <strong>Cakes for every occasion</strong>
+          </div>
+          <div>
+            <span class="mini-label">Pickup & delivery</span>
+            <strong>Branch availability shown live</strong>
+          </div>
+        </section>
+
+        <section id="desserts" class="section">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Signature sweets</p>
+              <h2>Dessert Collection</h2>
+            </div>
+          </div>
+          <div id="dessert-grid" class="dessert-grid" aria-live="polite"></div>
+        </section>
+
+        <section class="section featured">
+          <div class="feature-image">
+            <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1000&q=80" alt="Dessert cups with berries" />
+          </div>
+          <div class="feature-copy">
+            <p class="eyebrow">Featured box</p>
+            <h2>Party-ready dessert trays</h2>
+            <p>Mix tarts, cheesecakes, mousse cups, brownies, and fruit pastries into one polished tray for birthdays, offices, showers, and family nights.</p>
+            <a class="frost-btn primary" href="custom-order.html">Start an Order</a>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <strong>Fibello Sweets</strong>
+        <p>Premium cakes, pastries, and custom desserts.</p>
+      </div>
+      <div>
+        <a href="mailto:hello@fibellosweets.com">hello@fibellosweets.com</a>
+        <span>(555) 019-3221</span>
+      </div>
+    </footer>
+
+    <script type="module" src="js/nav.js"></script>
+    <script type="module" src="js/products.js"></script>
+  </body>
+</html>

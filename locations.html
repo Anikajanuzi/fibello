@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Locations | Fibello Sweets</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Fibello home"><img src="assets/fibello-logo.png" alt="Fibello Sweets logo" /></a>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="contact.html">Contact Us</a>
+          <a class="active" href="locations.html">Locations</a>
+          <a href="custom-order.html">Custom Order</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page active">
+        <div class="page-hero compact">
+          <p class="eyebrow">Find your sweets</p>
+          <h1>Fibello Locations</h1>
+          <p>Tap a sweet pin to view branch hours, address, and contact details.</p>
+        </div>
+        <section class="section location-layout">
+          <div class="map-panel">
+            <div class="map-canvas" aria-label="Interactive branch map">
+              <button class="map-pin active" style="--x: 28%; --y: 36%" data-city="Los Angeles">LA</button>
+              <button class="map-pin" style="--x: 53%; --y: 45%" data-city="Dallas">DA</button>
+              <button class="map-pin" style="--x: 72%; --y: 30%" data-city="Chicago">CH</button>
+              <button class="map-pin" style="--x: 83%; --y: 52%" data-city="Miami">MI</button>
+            </div>
+          </div>
+          <article id="location-card" class="location-card"></article>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div><strong>Fibello Sweets</strong><p>Premium cakes, pastries, and custom desserts.</p></div>
+      <div><a href="mailto:hello@fibellosweets.com">hello@fibellosweets.com</a><span>(555) 019-3221</span></div>
+    </footer>
+
+    <script type="module" src="js/nav.js"></script>
+    <script type="module" src="js/locations.js"></script>
+  </body>
+</html>
