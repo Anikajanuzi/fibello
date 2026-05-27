@@ -7,8 +7,8 @@ function renderDesserts() {
 
   dessertGrid.innerHTML = getDesserts()
     .map(
-      (dessert) => `
-        <article class="dessert-card">
+      (dessert, index) => `
+        <article class="dessert-card" style="--card-index: ${index}">
           <img src="${dessert.image}" alt="${dessert.name}">
           <div class="dessert-card-body">
             <h3>${dessert.name}</h3>

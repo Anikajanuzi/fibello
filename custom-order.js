@@ -30,6 +30,27 @@ const shapeClasses = {
   Custom: "shape-custom"
 };
 
+const shapePrices = {
+  Round: 0,
+  Square: 4,
+  Heart: 7,
+  Custom: 12
+};
+
+const decorationPrices = {
+  "Fresh Berries": 6,
+  "Chocolate Drizzle": 5,
+  "Gold Sprinkles": 4,
+  "Floral Piping": 9
+};
+
+const toppingPrices = {
+  Macarons: 7,
+  Truffles: 8,
+  "Fruit Crown": 10,
+  "Cookie Crumble": 5
+};
+
 function updateCake() {
   const data = new FormData(cakeForm);
   const shape = data.get("shape");
@@ -39,7 +60,7 @@ function updateCake() {
   const text = data.get("text").trim() || "Fibello";
   const decorations = data.get("decorations");
   const toppings = data.get("toppings");
-  const base = 28 + size * 3 + layers * 9 + candles * 1.5 + (toppings === "Fruit Crown" ? 8 : 5);
+  const base = 28 + size * 3 + layers * 9 + candles * 1.5 + shapePrices[shape] + decorationPrices[decorations] + toppingPrices[toppings];
   const stackHeight = 76 + (layers - 1) * 64;
 
   cakePreview.style.setProperty("--icing", icingColors[data.get("icing")]);
@@ -50,6 +71,9 @@ function updateCake() {
   cakePreview.style.setProperty("--decoration-bottom", `${Math.max(30, stackHeight - 84)}px`);
   cakePreview.classList.remove(...Object.values(shapeClasses));
   cakePreview.classList.add(shapeClasses[shape]);
+  cakePreview.dataset.layers = String(layers);
+  cakePreview.dataset.topping = toppings.toLowerCase().replaceAll(" ", "-");
+  cakePreview.dataset.decoration = decorations.toLowerCase().replaceAll(" ", "-");
   cakePreview.querySelector(".layer-one").classList.toggle("hidden-layer", layers < 1);
   cakePreview.querySelector(".layer-two").classList.toggle("hidden-layer", layers < 2);
   cakePreview.querySelector(".layer-three").classList.toggle("hidden-layer", layers < 3);
@@ -61,6 +85,8 @@ function updateCake() {
   drizzlePreview.className = `drizzle-preview ${decorations === "Chocolate Drizzle" ? "show-drizzle" : ""}`;
   decorationPreview.innerHTML = decorationMarkup(decorations);
   cakePrice.textContent = money(base);
+  cakePreview.classList.remove("preview-pop");
+  requestAnimationFrame(() => cakePreview.classList.add("preview-pop"));
 }
 
 function toppingMarkup(toppings) {
@@ -94,6 +120,10 @@ function setDateMinimum() {
 }
 
 cakeForm.addEventListener("input", updateCake);
+cakeForm.addEventListener("change", updateCake);
+cakeForm.querySelectorAll(".option-card").forEach((card) => {
+  card.addEventListener("click", () => requestAnimationFrame(updateCake));
+});
 
 cakeForm.addEventListener("submit", (event) => {
   event.preventDefault();

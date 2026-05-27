@@ -29,11 +29,16 @@
         </div>
         <section class="section location-layout">
           <div class="map-panel">
-            <div class="map-canvas" aria-label="Interactive branch map">
-              <button class="map-pin active" style="--x: 28%; --y: 36%" data-city="Los Angeles">LA</button>
-              <button class="map-pin" style="--x: 53%; --y: 45%" data-city="Dallas">DA</button>
-              <button class="map-pin" style="--x: 72%; --y: 30%" data-city="Chicago">CH</button>
-              <button class="map-pin" style="--x: 83%; --y: 52%" data-city="Miami">MI</button>
+            <label class="city-picker">Choose a city
+              <select id="city-select" name="city"></select>
+            </label>
+            <div class="map-canvas map-los-angeles" id="branch-map" aria-label="Interactive branch map">
+              <button class="map-pin candy-pin active" style="--x: 28%; --y: 36%" data-city="Los Angeles"><span>LA</span></button>
+              <button class="map-pin lollipop-pin" style="--x: 53%; --y: 45%" data-city="Dallas"><span>DA</span></button>
+              <button class="map-pin candy-pin" style="--x: 72%; --y: 30%" data-city="Chicago"><span>CH</span></button>
+              <button class="map-pin lollipop-pin" style="--x: 83%; --y: 52%" data-city="Miami"><span>MI</span></button>
+              <button class="map-pin candy-pin" style="--x: 42%; --y: 62%" data-city="Phoenix"><span>PH</span></button>
+              <button class="map-pin lollipop-pin" style="--x: 66%; --y: 68%" data-city="Atlanta"><span>AT</span></button>
             </div>
           </div>
           <article id="location-card" class="location-card"></article>
