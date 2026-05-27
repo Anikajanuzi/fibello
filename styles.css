@@ -64,9 +64,11 @@ img {
 }
 
 .brand img {
-  width: 148px;
-  height: 72px;
+  width: 210px;
+  height: 86px;
   object-fit: contain;
+  object-position: center;
+  border-radius: 10px;
 }
 
 .nav-links {
@@ -1311,8 +1313,8 @@ textarea:focus {
 
 @media (max-width: 620px) {
   .brand img {
-    width: 124px;
-    height: 62px;
+    width: 156px;
+    height: 70px;
   }
 
   .hero h1,
