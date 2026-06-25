@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Fibello Sweets</title>
+    <link rel="icon" type="image/png" href="assets/fibello-logo.png?v=pastry-logo" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Fibello home">
+          <img src="assets/fibello-logo.png?v=pastry-logo" alt="Fibello Pastry Shop logo" />
+        </a>
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a class="active" href="contact.html">Contact Us</a>
+          <a href="locations.html">Locations</a>
+          <a href="custom-order.html">Custom Order</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page active">
+        <div class="page-hero compact">
+          <p class="eyebrow">Say hello</p>
+          <h1>Contact Fibello</h1>
+          <p>Questions, celebrations, custom sweets, and last-minute dessert dreams all start here.</p>
+        </div>
+        <section class="contact-layout section">
+          <div class="contact-card">
+            <h2>Shop Details</h2>
+            <p><strong>Phone:</strong> <a href="tel:+15550193221">(555) 019-3221</a></p>
+            <p><strong>Email:</strong> <a href="mailto:hello@fibellosweets.com">hello@fibellosweets.com</a></p>
+            <p><strong>Hours:</strong> Mon-Thu 9 AM-8 PM, Fri-Sat 9 AM-10 PM, Sun 10 AM-6 PM</p>
+            <div class="social-row" aria-label="Social links">
+              <a class="social-dessert" href="https://www.instagram.com/fibellosweets/?hl=en" aria-label="Instagram" target="_blank" rel="noopener">
+                <img src="fibellosweets/social-media/instagram-logo.png" alt="" />
+              </a>
+              <a class="social-dessert" href="https://www.facebook.com/fibellollc/" aria-label="Facebook" target="_blank" rel="noopener">
+                <img src="fibellosweets/social-media/facebook-logo.png" alt="" />
+              </a>
+              <a class="social-dessert" href="https://www.tiktok.com/@fibellosweets" aria-label="TikTok" target="_blank" rel="noopener">
+                <img src="fibellosweets/social-media/tiktok-logo.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <h2>Send a Message</h2>
+            <label>Name<input name="name" required /></label>
+            <label>Email<input type="email" name="email" required /></label>
+            <label>Message<textarea name="message" rows="5" required></textarea></label>
+            <button class="frost-btn primary" type="submit">Send Message</button>
+            <p class="form-status" role="status"></p>
+          </form>
+        </section>
+        <section class="section faq">
+          <h2>FAQ</h2>
+          <details>
+            <summary>How early should I order a custom cake?</summary>
+            <p>Three to five days is ideal. Larger event cakes may need one to two weeks.</p>
+          </details>
+          <details>
+            <summary>Do you offer delivery?</summary>
+            <p>Yes, delivery availability depends on branch schedule and distance.</p>
+          </details>
+          <details>
+            <summary>Can I request allergy-friendly options?</summary>
+            <p>Add allergy notes to your custom order and our team will confirm what is possible.</p>
+          </details>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div><strong>Fibello Sweets</strong><p>Premium cakes, pastries, and custom desserts.</p></div>
+      <div><a href="mailto:hello@fibellosweets.com">hello@fibellosweets.com</a><span>(555) 019-3221</span></div>
+    </footer>
+
+    <script type="module" src="js/nav.js"></script>
+    <script type="module" src="js/contact.js"></script>
+  </body>
+</html>
